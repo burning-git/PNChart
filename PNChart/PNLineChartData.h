@@ -27,6 +27,8 @@ typedef PNLineChartDataItem *(^LCLineChartDataGetter)(NSUInteger item);
 
 @property (nonatomic) BOOL showPointLabel;
 @property (nonatomic) UIColor *pointLabelColor;
+@property (nonatomic) UIColor *pointLabelBgColor;
+
 @property (nonatomic) UIFont *pointLabelFont;
 @property (nonatomic) NSString *pointLabelFormat;
 
