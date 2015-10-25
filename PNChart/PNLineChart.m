@@ -1013,7 +1013,7 @@
     CATextLayer *textLayer = [[CATextLayer alloc]init];
     [textLayer setAlignmentMode:kCAAlignmentCenter];
     [textLayer setForegroundColor:[chartData.pointLabelColor CGColor]];
-    [textLayer setBackgroundColor:[chartData.pointLabelColor CGColor]];
+    [textLayer setBackgroundColor:[chartData.pointLabelBgColor CGColor]];
     [textLayer setCornerRadius:textLayer.fontSize/8.0];
     
     if (chartData.pointLabelFont != nil) {
