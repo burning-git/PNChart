@@ -54,6 +54,11 @@
 @property (nonatomic) CGFloat chartMarginTop;
 @property (nonatomic) CGFloat chartMarginBottom;
 
+@property(assign,nonatomic) NSTextAlignment xLabelTextAligment;
+@property(assign,nonatomic) NSTextAlignment yLabelTextAligment;
+@property(assign,nonatomic) NSTextAlignment yLabelTextWidthOffset;
+
+
 /**
  * Controls whether to show the coordinate axis. Default is NO.
  */

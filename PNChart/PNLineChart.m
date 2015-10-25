@@ -143,8 +143,8 @@
             
             NSInteger y = (NSInteger)(_chartCavanHeight - index * yStepHeight);
             
-            PNChartLabel *label = [[PNChartLabel alloc] initWithFrame:CGRectMake(0.0, y, (NSInteger)_chartMarginLeft * 0.9, (NSInteger)_yLabelHeight)];
-            [label setTextAlignment:NSTextAlignmentRight];
+            PNChartLabel *label = [[PNChartLabel alloc] initWithFrame:CGRectMake(0.0, y, (NSInteger)_chartMarginLeft+_yLabelTextWidthOffset, (NSInteger)_yLabelHeight)];
+            [label setTextAlignment:_yLabelTextAligment];
             label.text = labelText;
             [self setCustomStyleForYLabel:label];
             [self addSubview:label];
@@ -202,7 +202,7 @@
             NSInteger y = _chartMarginBottom + _chartCavanHeight;
 
             PNChartLabel *label = [[PNChartLabel alloc] initWithFrame:CGRectMake(x, y, (NSInteger)_xLabelWidth, (NSInteger)_chartMarginBottom)];
-            [label setTextAlignment:NSTextAlignmentCenter];
+            [label setTextAlignment:_xLabelTextAligment];
             label.text = labelText;
             [self setCustomStyleForXLabel:label];
             [self addSubview:label];
@@ -765,6 +765,9 @@
     _yLabelNum = 5.0;
     _yLabelHeight = [[[[PNChartLabel alloc] init] font] pointSize];
 
+    _yLabelTextAligment = NSTextAlignmentCenter;
+    _xLabelTextAligment = NSTextAlignmentRight;
+    
 //    _chartMargin = 40;
     
     _chartMarginLeft     = 25.0;
